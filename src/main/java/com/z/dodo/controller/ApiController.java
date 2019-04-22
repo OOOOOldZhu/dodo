@@ -61,7 +61,12 @@ public class ApiController {
         if (age < 0) {
             return new Data().setCode(-3).setResult("Age can not be less than zero.");
         }
-        dada(info);
+        try{
+            dada(info);
+        }catch (Exception e){
+            Log.d("数据库操作错误 : " + e);
+            return new Data().setCode(500).setResult(e.toString());
+        }
         String result = nickname + "'s age is " + age + " year old, " + "he(she) is a " + gender;
         return new Data().setCode(0).setResult(result);
     }
