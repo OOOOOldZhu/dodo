@@ -1,6 +1,7 @@
-package com.z.dodo;
+package com.z.dodo.tool;
 
 public class Log {
+
     static String TAG = "zzz";
 
     public static void d(String TAG, String content) {

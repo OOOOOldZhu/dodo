@@ -1,5 +1,6 @@
 package com.z.dodo;
 
+import com.z.dodo.tool.Log;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
