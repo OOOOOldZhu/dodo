@@ -33,15 +33,13 @@ public class ApiController {
     String TAG = "zzz";
 
     private Data dealWith(Info info) {
-        dada(info);
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             String req = objectMapper.writeValueAsString(info);
-            Log.d(req);
+            Log.d("服务器接收到的请求 : "+req);
         } catch (Exception e) {
             Log.d(e.toString());
         }
-        //Log.d(TAG, info.toString());
         String nickname = info.getNickname();
         String gender = info.getGender();
         int age = info.getAge();
@@ -63,7 +61,7 @@ public class ApiController {
         if (age < 0) {
             return new Data().setCode(-3).setResult("Age can not be less than zero.");
         }
-
+        dada(info);
         String result = nickname + "'s age is " + age + " year old, " + "he(she) is a " + gender;
         return new Data().setCode(0).setResult(result);
     }
