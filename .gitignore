@@ -21,3 +21,6 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+//忽略本地服务器、数据库地址，防止被盗
+./src/main/java/com.z.dodo/bean/Constans.java
