@@ -30,7 +30,6 @@ public class ApiController {
      * @param info  用户的信息
      * @return 处理用户信息的结果
      */
-    String TAG = "zzz";
 
     private Data dealWith(Info info) {
         try {
@@ -62,7 +61,7 @@ public class ApiController {
             return new Data().setCode(-3).setResult("Age can not be less than zero.");
         }
         try{
-            dada(info);
+            saveUser(info);
         }catch (Exception e){
             Log.d("数据库操作错误 : " + e);
             return new Data().setCode(500).setResult(e.toString());
@@ -71,7 +70,7 @@ public class ApiController {
         return new Data().setCode(0).setResult(result);
     }
 
-    private void dada(Info info) {
+    private void saveUser(Info info) {
         /* 建立与mongodb数据库的连接，可指定参数，如：MongoClient client = new MongoClient(“localhost”,27017); */
         MongoClient client = new MongoClient(Constans.url, Constans.port);
         MongoClientOptions mongoClientOptions = client.getMongoClientOptions();
