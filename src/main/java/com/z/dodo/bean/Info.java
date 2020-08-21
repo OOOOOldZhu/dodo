@@ -29,4 +29,14 @@ public class Info {
     public int getAge() {
         return age;
     }
+
+
+    @Override
+    public String toString() {
+        return "Info{" +
+                "nickname='" + nickname + '\'' +
+                ", gender='" + gender + '\'' +
+                ", age='" + age + '\'' +
+                '}';
+    }
 }

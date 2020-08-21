@@ -33,6 +33,7 @@ public class ApiController {
 
     private Data dealWith(Info info) {
         try {
+            System.out.println("info - - - - - - - - > "+info.toString());
             ObjectMapper objectMapper = new ObjectMapper();
             String req = objectMapper.writeValueAsString(info);
             Log.d("服务器接收到的请求 : "+req);
