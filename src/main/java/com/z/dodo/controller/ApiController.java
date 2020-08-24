@@ -17,12 +17,12 @@ import java.util.Iterator;
 public class ApiController {
 
     @GetMapping(value = "/test")
-    public Data get(Info info) {
+    public Data get(@RequestBody Info info) {
         return dealWith(info);
     }
 
     @PostMapping(value = "/test")
-    public Data post(Info info) {
+    public Data post(@RequestBody Info info) {
         return dealWith(info);
     }
 
